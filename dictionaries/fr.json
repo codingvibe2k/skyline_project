@@ -1,0 +1,265 @@
+{
+  "hero": {
+    "badge": "Bujumbura, Burundi",
+    "title": "Showroom Automobile Premium",
+    "subtitle": "Norme Absolue 0 Km",
+    "description": "Découvrez notre flotte exclusive de véhicules électriques neufs d'usine, conçue pour les diplomates, entreprises et institutions exigeantes au Burundi, sans émissions.",
+    "ctaPrimary": "Explorer le Showroom",
+    "ctaSecondary": "Infrastructure de Recharge"
+  },
+  "nav": {
+    "showroom": "Showroom de la Flotte",
+    "chargingGrid": "Réseau de Recharge",
+    "inquiries": "Demandes",
+    "controlCenter": "Centre de Contrôle",
+    "network": "Réseau de Recharge",
+    "fleet": "Admission de la Flotte",
+    "diplomatic": "Centre Diplomatique",
+    "home": "Accueil",
+    "aboutUs": "À Propos",
+    "services": "Services",
+    "contact": "Contact",
+    "selectLanguage": "Sélectionner la langue"
+  },
+  "properties": {
+    "batteryPack": "Pack Batterie",
+    "operatingRange": "Autonomie de Fonctionnement",
+    "peakPower": "Puissance de Pointe",
+    "onBoardComputer": "Ordinateur de Bord",
+    "factoryWarranty": "Garantie d'Usine",
+    "energyCapacity": "Capacité Énergétique",
+    "driveType": "Configuration de Transmission",
+    "acceleration": "Accélération (0-100 km/h)"
+  },
+  "infrastructure": {
+    "stationStatus": "Statut de la Station",
+    "chargerConnection": "Connexion du Chargeur",
+    "highVoltageOutput": "Puissance Haute Tension",
+    "activeStations": "Stations Actives",
+    "connectorType": "Type de Connecteur",
+    "powerOutput": "Puissance de Sortie"
+  },
+  "showroom": {
+    "featuredVehicles": "Véhicules Électriques en Vedette",
+    "exploreVehicle": "Découvrir le Véhicule",
+    "available": "Disponible",
+    "reserved": "Réservé",
+    "allocated": "Attribué",
+    "range": "Autonomie",
+    "power": "Puissance",
+    "acceleration": "0-100",
+    "topSpeed": "Vitesse Max",
+    "battery": "Batterie",
+    "startingFrom": "À partir de",
+    "reserveNow": "Réserver maintenant",
+    "searchPlaceholder": "Rechercher dans notre collection électrique...",
+    "brand": "Marque",
+    "bodyType": "Type de carrosserie",
+    "rangeFilter": "Autonomie",
+    "inventory": "Inventaire"
+  },
+  "footer": {
+    "tagline": "Pionnier de la mobilité électrique d'usine avec performance inégalée et zéro émission au cœur.",
+    "columns": {
+      "corporate": {
+        "heading": "Hub Flotte Entreprise",
+        "links": [
+          { "label": "Tous les Véhicules Électriques", "href": "/showroom" },
+          { "label": "Modèles BYD", "href": "/showroom?brand=BYD" },
+          { "label": "Modèles MG", "href": "/showroom?brand=MG" },
+          { "label": "Modèles Toyota", "href": "/showroom?brand=Toyota" },
+          { "label": "Voir le Catalogue Complet", "href": "/showroom" }
+        ]
+      },
+      "diplomatic": {
+        "heading": "Réseau Diplomatique",
+        "links": [
+          { "label": "Programme Flotte Ambassade", "href": "/diplomatic" },
+          { "label": "Allocation Agences ONU", "href": "/diplomatic" },
+          { "label": "Admission de la Flotte", "href": "/fleet" },
+          { "label": "Conformité Protocole", "href": "/diplomatic" },
+          { "label": "Demande de Flotte", "href": "/fleet" }
+        ]
+      },
+      "sustainability": {
+        "heading": "Plan de Durabilité",
+        "links": [
+          { "label": "Carte du Réseau de Recharge", "href": "/network" },
+          { "label": "Engagements ESG", "href": "/network" },
+          { "label": "Données Zéro Émission", "href": "/network" },
+          { "label": "Hubs de Recharge Solaire", "href": "/network" },
+          { "label": "Rapport VE Burundi", "href": "/network" }
+        ]
+      },
+      "legal": {
+        "heading": "Juridique & Conformité",
+        "links": [
+          { "label": "Conditions de Garantie Usine", "href": "/fleet" },
+          { "label": "Politique de Confidentialité", "href": "/fleet" },
+          { "label": "Conditions d'Utilisation", "href": "/fleet" },
+          { "label": "Politique des Cookies", "href": "/fleet" },
+          { "label": "Plan du Site", "href": "/fleet" }
+        ]
+      }
+    },
+    "trust": [
+      {
+        "icon": "shield",
+        "title": "Qualité Inégalée",
+        "desc": "Certification d'usine rigoureuse pour une excellence irréprochable."
+      },
+      {
+        "icon": "user",
+        "title": "Client en Premier",
+        "desc": "Votre satisfaction et vie privée sont nos priorités."
+      },
+      {
+        "icon": "globe",
+        "title": "Livraison Mondiale",
+        "desc": "Mobilité électrique livrée à votre porte."
+      },
+      {
+        "icon": "zap",
+        "title": "Avenir Durable",
+        "desc": "Innover pour un lendemain plus propre."
+      }
+    ],
+    "badges": [
+      {
+        "icon": "shield",
+        "title": "Garantie Batterie 8 Ans",
+        "desc": "Roulez en toute sérénité."
+      },
+      {
+        "icon": "charging",
+        "title": "Réseau de Recharge National",
+        "desc": "Accédez à des milliers de points de recharge."
+      },
+      {
+        "icon": "refresh",
+        "title": "Assistance Routière 24h/7j",
+        "desc": "Nous sommes là quand vous en avez besoin."
+      },
+      {
+        "icon": "lock",
+        "title": "Sécurisé & Chiffré",
+        "desc": "Vos données sont toujours protégées."
+      }
+    ],
+    "newsletter": {
+      "heading": "Newsletter",
+      "desc": "Abonnez-vous pour recevoir les dernières actualités, offres et événements exclusifs.",
+      "placeholder": "Saisissez votre e-mail",
+      "ariaLabel": "S'abonner"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "bottom": {
+      "copyright": "© 2026 Showroom Premium 0 Km. Spécifications Exclusivement d'Usine.",
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions d'Utilisation",
+      "cookies": "Politique des Cookies",
+      "sitemap": "Plan du Site",
+      "backToTop": "Retour en haut"
+    }
+  },
+  "about": {
+    "title": "À Propos de Skyline Motors",
+    "subtitle": "Élever votre expérience de conduite à Bujumbura, Burundi.",
+    "mission": "Notre Mission à Bujumbura",
+    "missionDesc": "Chez Skyline Motors, notre mission est de révolutionner la mobilité individuelle au Burundi en offrant l'accès à des véhicules électriques haut de gamme. Nous nous engageons à offrir un service exceptionnel, des solutions durables et une expérience d'acquisition sans faille, garantissant à nos clients de dépenser moins et de conduire mieux. Nous sommes fiers d'apporter l'avenir de la conduite à Bujumbura.",
+    "leadership": "L'Équipe de Direction",
+    "leadershipDesc": "Les esprits visionnaires derrière l'expérience automobile haut de gamme au Burundi.",
+    "unwaveringCommitment": "Notre Engagement Inébranlable",
+    "premiumService": "Service Premium",
+    "premiumServiceDesc": "Un traitement attentionné à chaque étape, de la consultation à la maintenance à long terme.",
+    "sustainableSolutions": "Solutions Durables",
+    "sustainableSolutionsDesc": "Conduire la transition vers l'énergie verte au Burundi sans compromis sur la performance ou le luxe.",
+    "seamlessOwnership": "Expérience sans Tracas",
+    "seamlessOwnershipDesc": "Financement flexible, garanties complètes et un écosystème d'entretien fluide pour les conducteurs exigeants."
+  },
+  "services": {
+    "heroTitle": "Alimenter le Cœur de l'Afrique",
+    "heroDesc": "Découvrez notre réseau de recharge ultra-rapide en pleine expansion à travers le Burundi et la République Démocratique du Congo.",
+    "findStation": "Trouver une Station",
+    "viewMap": "Voir la Carte",
+    "explore": "Explorer les Services",
+    "gridTitle": "Le Réseau Électrique Régional",
+    "gridDesc": "Des hubs stratégiquement positionnés reliant Bujumbura aux confins de Kinshasa et Goma. Notre réseau est l'épine dorsale de la mobilité électrique africaine.",
+    "operational": "Opérationnel",
+    "operationalSub": "Stations de 150kW Actives",
+    "expanding": "En Expansion",
+    "expandingSub": "Préparation des Sites en Cours",
+    "bujumburaHub": "Station Bujumbura",
+    "kinshasaSuperhub": "Superhub Kinshasa",
+    "gomaStation": "Station Goma",
+    "realTimeStatus": "Statut en Temps Réel",
+    "connectedPoints": "142 Bornes Connectées",
+    "infraTitle": "Infrastructure Ultra-Rapide",
+    "techExcellence": "Excellence Technique",
+    "dcFastCharging": "Recharge Rapide DC 150kW",
+    "thirtyMins": "30 Minutes",
+    "thirtyMinsDesc": "Recharge rapide de 20% à 80% de la capacité.",
+    "secTitle": "Sécurité 24/7",
+    "secDesc": "Sites surveillés avec des salons d'attente premium confortables.",
+    "homeSuiteTitle": "Gamme de Recharge Résidentielle",
+    "homeSuiteDesc": "Des solutions de recharge élégantes pour votre domicile ou vos bureaux de direction.",
+    "installationOrder": "Demander l'Installation",
+    "portableUtility": "Utilitaire Portable Renforcé",
+    "careTitle": "Entretien & Maintenance Skyline",
+    "precisionManuf": "Diagnostics Haute Tension",
+    "precisionManufDesc": "Nos techniciens certifiés utilisent des outils de diagnostic brevetés pour surveiller la santé des batteries et optimiser la gestion thermique pour le climat d'Afrique centrale.",
+    "coverageTitle": "Garantie Régionale Étendue",
+    "coverageDesc": "Une garantie complète de 8 ans ou 160 000 km sur tous les composants de transmission, soutenue par nos centres locaux au Burundi et en RDC.",
+    "certifiedTechs": "Techniciens Certifiés",
+    "certifiedTechsDesc": "Une formation continue rigoureuse permet à notre équipe d'être à la pointe de la technologie des véhicules électriques.",
+    "supportTitle": "Assistance Recharge Immédiate",
+    "supportDesc": "Des questions sur l'installation ou l'état du réseau ? Contactez nos spécialistes régionaux par WhatsApp.",
+    "waBtn": "Consulter un Spécialiste Recharge via WhatsApp"
+  },
+  "contact": {
+    "hereToHelp": "Nous sommes là pour vous aider",
+    "helpDesc": "Découvrez l'avenir de la mobilité au Burundi et en RDC. Notre équipe de spécialistes est prête à vous guider dans l'univers de l'électrification haut de gamme.",
+    "nameLabel": "Nom",
+    "namePlaceholder": "ex: Jean-Pierre Nkurunziza",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "ex: contact@skyline-motors.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
+    "btnSubmit": "Envoyer le message",
+    "testimonial": "Skyline a réduit les délais de nos projets de 30% et a transformé notre logistique régionale entre le Burundi et la RDC grâce à son soutien de flotte EV.",
+    "bujumburaShowroom": "Showroom de Bujumbura",
+    "kinshasaHub": "Hub Logistique de Kinshasa",
+    "customerCare": "Service Clientèle",
+    "viewOnMap": "Voir sur la carte",
+    "liveSupport": "Assistance en Direct",
+    "supportSubtitle": "Disponible 24h/24 et 7j/7 pour notre infrastructure électrique.",
+    "subjectLabel": "Sujet",
+    "subjectProcurement": "Aquisition Véhicule",
+    "subjectAppointment": "Rendez-vous Service",
+    "subjectFleet": "Solutions Flotte",
+    "subjectSupport": "Support Technique",
+    "subjectPartnerships": "Partenariats",
+    "consent": "J'accepte le traitement de mes données personnelles conformément à la politique de confidentialité.",
+    "sending": "Envoi en cours...",
+    "success": "Message Reçu",
+    "submitting": "Envoyer la Demande"
+  },
+  "efficiencyCalculator": {
+    "roiAnalytics": "Analyse du ROI",
+    "sustainabilityCalculator": "Calculateur d'Économies",
+    "selectVehicleSegment": "Sélectionner la gamme de véhicule",
+    "commercialVan": "Logistique Commerciale (Van)",
+    "citySedan": "Citadine (Berline/Sedan)",
+    "regionalSuv": "Tout-Terrain Régional (SUV)",
+    "personalMoto": "Trajet Personnel (Moto)",
+    "estimatedMonthlyKm": "Kilomètres mensuels estimés",
+    "annualSavingsEstimate": "Économie annuelle estimée",
+    "calculatedFooter": "Calculé par rapport aux prix actuels du carburant à Kinshasa et Bujumbura.",
+    "requestAudit": "Demander un audit complet"
+  }
+}

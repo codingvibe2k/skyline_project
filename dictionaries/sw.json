@@ -1,0 +1,265 @@
+{
+  "hero": {
+    "badge": "Bujumbura, Burundi",
+    "title": "Chumba cha Maonyesho ya Magari ya Kifahari",
+    "subtitle": "Kiwango Halisi cha 0 Km",
+    "description": "Gundua meli yetu ya kipekee ya magari mapya ya umeme ya kiwandani, yaliyoundwa kwa ajili ya wanadiplomasia, mashirika na taasisi zinazohitaji nchini Burundi bila uzalishaji wowote.",
+    "ctaPrimary": "Gundua Chumba cha Maonyesho",
+    "ctaSecondary": "Miundombinu ya Kuchaji"
+  },
+  "nav": {
+    "showroom": "Meli ya Maonyesho",
+    "chargingGrid": "Gridi ya Kuchaji",
+    "inquiries": "Maswali na Maombi",
+    "controlCenter": "Kituo cha Udhibiti",
+    "network": "Gridi ya Kuchaji",
+    "fleet": "Uandikishaji wa Mashirika",
+    "diplomatic": "Kituo cha Kidiplomasia",
+    "home": "Nyumbani",
+    "aboutUs": "Kutuhusu",
+    "services": "Huduma",
+    "contact": "Mawasiliano",
+    "selectLanguage": "Chagua Lugha"
+  },
+  "properties": {
+    "batteryPack": "Kifurushi cha Betri",
+    "operatingRange": "Upeo wa Uendeshaji",
+    "peakPower": "Nguvu ya Juu",
+    "onBoardComputer": "Kompyuta ya Ndani",
+    "factoryWarranty": "Dhamana ya Kiwanda",
+    "energyCapacity": "Uwezo wa Nishati",
+    "driveType": "Usanidi wa Uendeshaji",
+    "acceleration": "Mvuto (Kasi ya 0-100 km/h)"
+  },
+  "infrastructure": {
+    "stationStatus": "Hali ya Kituo",
+    "chargerConnection": "Uunganisho wa Chaja",
+    "highVoltageOutput": "Nishati ya Voltage ya Juu",
+    "activeStations": "Vituo Amilifu",
+    "connectorType": "Aina ya Kiunganishi",
+    "powerOutput": "Nguvu ya Kutoa"
+  },
+  "showroom": {
+    "featuredVehicles": "Magari ya Umeme Yanayoangaziwa",
+    "exploreVehicle": "Tazama Gari",
+    "available": "Linapatikana",
+    "reserved": "Limehifadhiwa",
+    "allocated": "Limetengwa",
+    "range": "Umbali",
+    "power": "Nguvu",
+    "acceleration": "0-100",
+    "topSpeed": "Kasi ya Juu",
+    "battery": "Betri",
+    "startingFrom": "Kuanzia",
+    "reserveNow": "Hifadhi Sasa",
+    "searchPlaceholder": "Tafuta mkusanyiko wetu wa umeme...",
+    "brand": "Chapa",
+    "bodyType": "Aina ya gari",
+    "rangeFilter": "Upeo wa masafa",
+    "inventory": "Hesabu ya Magari"
+  },
+  "footer": {
+    "tagline": "Tunaongoza usafirishaji wa magari mapya ya umeme wa kiwanda wenye utendaji wa hali na uzalishaji sifuri.",
+    "columns": {
+      "corporate": {
+        "heading": "Kituo cha Meli ya Kampuni",
+        "links": [
+          { "label": "Magari Yote ya Umeme", "href": "/showroom" },
+          { "label": "Mifano ya BYD", "href": "/showroom?brand=BYD" },
+          { "label": "Mifano ya MG", "href": "/showroom?brand=MG" },
+          { "label": "Mifano ya Toyota", "href": "/showroom?brand=Toyota" },
+          { "label": "Tazama Katalogi Yote", "href": "/showroom" }
+        ]
+      },
+      "diplomatic": {
+        "heading": "Mtandao wa Kidiplomasia",
+        "links": [
+          { "label": "Programu ya Meli ya Ubalozi", "href": "/diplomatic" },
+          { "label": "Ugawaji wa Mashirika ya UN", "href": "/diplomatic" },
+          { "label": "Uandikishaji wa Mashirika", "href": "/fleet" },
+          { "label": "Uzingatiaji wa Itifaki", "href": "/diplomatic" },
+          { "label": "Ombi la Meli", "href": "/fleet" }
+        ]
+      },
+      "sustainability": {
+        "heading": "Mpango wa Uendelevu",
+        "links": [
+          { "label": "Ramani ya Mtandao wa Kuchaji", "href": "/network" },
+          { "label": "Ahadi za ESG", "href": "/network" },
+          { "label": "Data ya Uzalishaji Sifuri", "href": "/network" },
+          { "label": "Vituo vya Kuchaji Jua", "href": "/network" },
+          { "label": "Ripoti ya EV Burundi", "href": "/network" }
+        ]
+      },
+      "legal": {
+        "heading": "Kisheria & Uzingatiaji",
+        "links": [
+          { "label": "Masharti ya Dhamana ya Kiwanda", "href": "/fleet" },
+          { "label": "Sera ya Faragha", "href": "/fleet" },
+          { "label": "Masharti ya Huduma", "href": "/fleet" },
+          { "label": "Sera ya Vidakuzi", "href": "/fleet" },
+          { "label": "Ramani ya Tovuti", "href": "/fleet" }
+        ]
+      }
+    },
+    "trust": [
+      {
+        "icon": "shield",
+        "title": "Ubora Usio na Kifani",
+        "desc": "Uthibitisho wa kiwanda mkali kwa ubora usio na maelewano."
+      },
+      {
+        "icon": "user",
+        "title": "Mteja Kwanza",
+        "desc": "Kuridhika kwako na faragha yako ni vipaumbele vyetu."
+      },
+      {
+        "icon": "globe",
+        "title": "Utoaji Duniani",
+        "desc": "Kuwasilisha usafirishaji wa umeme hadi mlangoni kwako."
+      },
+      {
+        "icon": "zap",
+        "title": "Mustakabali Endelevu",
+        "desc": "Kuendesha uvumbuzi kwa kesho safi zaidi."
+      }
+    ],
+    "badges": [
+      {
+        "icon": "shield",
+        "title": "Dhamana ya Betri ya Miaka 8",
+        "desc": "Endesha kwa amani kamili."
+      },
+      {
+        "icon": "charging",
+        "title": "Mtandao wa Kuchaji wa Taifa",
+        "desc": "Pata maelfu ya vituo vya kuchaji."
+      },
+      {
+        "icon": "refresh",
+        "title": "Usaidizi wa Barabarani 24/7",
+        "desc": "Tuko hapa wakati wowote unahitaji."
+      },
+      {
+        "icon": "lock",
+        "title": "Salama & Imesimbwa",
+        "desc": "Data yako inalindwa kila wakati."
+      }
+    ],
+    "newsletter": {
+      "heading": "Jarida",
+      "desc": "Jisajili kupata masasisho ya hivi karibuni kuhusu magari mapya, ofa, na matukio ya kipekee.",
+      "placeholder": "Ingiza barua pepe yako",
+      "ariaLabel": "Jisajili"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "bottom": {
+      "copyright": "© 2026 Chumba cha Maonyesho Premium 0 Km. Maelezo ya Kiwanda Peke Yake.",
+      "privacy": "Sera ya Faragha",
+      "terms": "Masharti ya Huduma",
+      "cookies": "Sera ya Vidakuzi",
+      "sitemap": "Ramani ya Tovuti",
+      "backToTop": "Rudi juu"
+    }
+  },
+  "about": {
+    "title": "Kuhusu Skyline Motors",
+    "subtitle": "Kuinua Uendeshaji Wako Bujumbura, Burundi.",
+    "mission": "Dhamira Yetu nchini Bujumbura",
+    "missionDesc": "Katika Skyline Motors, dhamira yetu ni kubadilisha usafiri wa kibinafsi nchini Burundi kwa kutoa magari ya kifahari ya umeme. Tumejitolea kutoa huduma bora zaidi, suluhisho endelevu, na uzoefu rahisi wa umiliki, kuhakikisha wateja wetu wanalipa kidogo na kuendesha vizuri zaidi. Tunajivunia kuleta mustakabali wa uendeshaji hadi Bujumbura.",
+    "leadership": "Timu ya Uongozi",
+    "leadershipDesc": "Wataalamu wenye maono nyuma ya uzoefu wa hali ya juu wa magari nchini Burundi.",
+    "unwaveringCommitment": "Ahadi Yetu Isiyotikisika",
+    "premiumService": "Huduma ya Kipekee",
+    "premiumServiceDesc": "Matibabu ya kifahari katika kila hatua, kuanzia ushauri hadi matengenezo ya muda mrefu.",
+    "sustainableSolutions": "Suluhisho Endelevu",
+    "sustainableSolutionsDesc": "Kuongoza mpito wa nishati ya kijani nchini Burundi bila kuathiri utendaji au anasa.",
+    "seamlessOwnership": "Umiliki Rahisi",
+    "seamlessOwnershipDesc": "Ufadhili rahisi, udhamini mpana, na mazingira rahisi kwa dereva mwenye busara."
+  },
+  "services": {
+    "heroTitle": "Kusambaza Nishati Kati mwa Afrika",
+    "heroDesc": "Chunguza mtandao wetu unaokua kwa kasi wa vituo vya kuchaji haraka sana kote Burundi na Jamhuri ya Kidemokrasia ya Kongo.",
+    "findStation": "Tafuta Kituo",
+    "viewMap": "Angalia Ramani",
+    "explore": "Chunguza Huduma",
+    "gridTitle": "Gridi ya Nishati ya Kikanda",
+    "gridDesc": "Vituo vilivyowekwa kimkakati vinavyounganisha Bujumbura hadi maeneo ya mbali ya Kinshasa na Goma. Gridi yetu ni uti wa mgongo wa usafiri wa umeme barani Afrika.",
+    "operational": "Inafanya kazi",
+    "operationalSub": "Vituo Amilifu vya 150kW",
+    "expanding": "Inapanuka",
+    "expandingSub": "Maandalizi ya Maeneo Yanaendelea",
+    "bujumburaHub": "Kituo cha Bujumbura",
+    "kinshasaSuperhub": "Kituo Kikuu cha Kinshasa",
+    "gomaStation": "Kituo cha Goma",
+    "realTimeStatus": "Hali ya Sasa",
+    "connectedPoints": "Ncha 142 Zilizounganishwa",
+    "infraTitle": "Miundombinu ya Kasi ya Juu",
+    "techExcellence": "Ubora wa Kiufundi",
+    "dcFastCharging": "Kuchaji Haraka kwa 150kW DC",
+    "thirtyMins": "Dakika 30",
+    "thirtyMinsDesc": "Kujaza haraka kuanzia 20% hadi 80% ya uwezo wa betri.",
+    "secTitle": "Ulinzi wa 24/7",
+    "secDesc": "Maeneo yanayolindwa yenye sehemu za kupumzikia za kifahari.",
+    "homeSuiteTitle": "Suluhisho la Kuchaji Nyumbani",
+    "homeSuiteDesc": "Suluhisho bora la nishati kwa makazi yako au ofisi ya mtendaji mkuu.",
+    "installationOrder": "Agiza Usakinishaji",
+    "portableUtility": "Chombo cha Huduma za Ndani kilichoimarishwa",
+    "careTitle": "Ukurasa wa Huduma na Utunzaji wa Skyline",
+    "precisionManuf": "Uchunguzi wa Voltage ya Juu",
+    "precisionManufDesc": "Mafundi wetu walioidhinishwa wanatumia zana maalum za uchunguzi ili kufuatilia afya ya betri na kuboresha mifumo ya usimamizi vya joto kwa hali ya hewa ya Afrika ya Kati.",
+    "coverageTitle": "Udhamini wa Kikanda",
+    "coverageDesc": "Udhamini wa miaka 8 au kilomita 160,000 kwenye sehemu zote za gari, unaoungwa mkono na vituo vyetu vya huduma nchini Burundi na DRC.",
+    "certifiedTechs": "Mafundi Walioidhinishwa",
+    "certifiedTechsDesc": "Mafunzo ya mara kwa mara yanahakikisha timu yetu inasalia kileleni mwa teknolojia ya magari ya umeme na itifaki za usalama.",
+    "supportTitle": "Msaada wa Kuchaji Haraka",
+    "supportDesc": "Je, una maswali kuhusu usakinishaji au hali ya mtandao wetu? Wasiliana moja kwa moja na wataalamu wetu kupitia WhatsApp.",
+    "waBtn": "Sultana na Mtaalamu wa Kuchaji kupitia WhatsApp"
+  },
+  "contact": {
+    "hereToHelp": "Tuko hapa kukusaidia",
+    "helpDesc": "Chunguza mustakabali wa usafiri nchini Burundi na DRC. Timu yetu iko tayari kukusaidia kuanza safari yako ya usafiri wa kifahari wa umeme.",
+    "nameLabel": "Jina",
+    "namePlaceholder": "mfano: Jean-Pierre Nkurunziza",
+    "emailLabel": "Barua pepe",
+    "emailPlaceholder": "mfano: contact@skyline-motors.com",
+    "messageLabel": "Ujumbe",
+    "messagePlaceholder": "Tujulishe jinsi tunavyoweza kukusaidia...",
+    "btnSubmit": "Tuma ujumbe",
+    "testimonial": "Skyline ilipunguza ucheleweshaji wa miradi yetu kwa 30% na ikabadilisha kabisa usafirishaji wetu wa kikanda kote Burundi na DRC kwa miundo yao bora ya usaidizi wa EV.",
+    "bujumburaShowroom": "Chumba cha Maonyesho cha Bujumbura",
+    "kinshasaHub": "Kituo cha Usafirishaji cha Kinshasa",
+    "customerCare": "Huduma kwa Wateja",
+    "viewOnMap": "Tazama kwenye Ramani",
+    "liveSupport": "Msaada wa Moja kwa Moja",
+    "supportSubtitle": "Inapatikana 24/7 kwa usaidizi wa miundombinu ya kikanda ya EV.",
+    "subjectLabel": "Mada",
+    "subjectProcurement": "Upatikanaji wa Gari",
+    "subjectAppointment": "Ahadi ya Huduma",
+    "subjectFleet": "Suluhisho za Fleet",
+    "subjectSupport": "Usaidizi wa Kiufundi",
+    "subjectPartnerships": "Ushirikiano",
+    "consent": "Ninakubali usindikaji wa data yangu ya kibinafsi kulingana na sera ya faragha.",
+    "sending": "Inatuma...",
+    "success": "Ujumbe Umepokelewa",
+    "submitting": "Tuma Agizo la Huduma"
+  },
+  "efficiencyCalculator": {
+    "roiAnalytics": "Uchambuzi wa ROI",
+    "sustainabilityCalculator": "Kikokotoo cha Kudumu",
+    "selectVehicleSegment": "Chagua Aina ya Gari",
+    "commercialVan": "Usafirishaji wa Kibiashara (Van)",
+    "citySedan": "Usafiri wa Mjini (Sedan)",
+    "regionalSuv": "Magari ya Milimani (SUV)",
+    "personalMoto": "Usafiri wa Kibinafsi (Moto)",
+    "estimatedMonthlyKm": "Makisio ya Kilomita kwa Mwezi",
+    "annualSavingsEstimate": "Kadirio la Akiba ya Mwaka",
+    "calculatedFooter": "Yaliyohesabiwa dhidi ya bei ya sasa ya mafuta huko Bujumbura na Kinshasa.",
+    "requestAudit": "Omba Ukaguzi Kamili"
+  }
+}

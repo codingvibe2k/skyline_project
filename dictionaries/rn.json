@@ -1,0 +1,265 @@
+{
+  "hero": {
+    "badge": "Bujumbura, Uburundi",
+    "title": "Ikibanza c'Imiduga ya Premium",
+    "subtitle": "Ibipimo Nkoramutima vya 0 Km",
+    "description": "Tora imiduga mishasha yacu ya kigirishingo (EV) ivuye kw'ihinguriro, yateguriwe abadandaji, amashirika n'inzego zikomeye mu Burundi ata myotsi isohora.",
+    "ctaPrimary": "Gendera Ikibanza",
+    "ctaSecondary": "Ibikoresho vyo Guchaji"
+  },
+  "nav": {
+    "showroom": "Ahabikwa Imiduga",
+    "chargingGrid": "Réseau yo Guchaji",
+    "inquiries": "Idosiye z'Ibikenerwa",
+    "controlCenter": "Ikibanza co Guhagararira",
+    "network": "Réseau yo Guchaji",
+    "fleet": "Ikibanza c'Amashirika",
+    "diplomatic": "Ihuriro ry'Abadipulomate",
+    "home": "Muhira",
+    "aboutUs": "Ibitwerekeye",
+    "services": "Ibikorwa",
+    "contact": "Twandikire",
+    "selectLanguage": "Hitamo Ururimi"
+  },
+  "properties": {
+    "batteryPack": "Imihango ya Batterie",
+    "operatingRange": "Urugendo ishobora gukora",
+    "peakPower": "Inguvu z'Umurengera",
+    "onBoardComputer": "Imashini y'imbere mu muduga",
+    "factoryWarranty": "Ingarantiyé y'Ihinguriro",
+    "energyCapacity": "Ububiko bw'Inguvu",
+    "driveType": "Uburyo bwo kuyobora",
+    "acceleration": "Kunyurura (0-100 km/h)"
+  },
+  "infrastructure": {
+    "stationStatus": "Uko ikibaza gihagaze",
+    "chargerConnection": "Ihuriro ryo Guchaji",
+    "highVoltageOutput": "Inguvu y'Imiriro Inini",
+    "activeStations": "Ibibanza Bikora",
+    "connectorType": "Ubwoko bw'Igikoresho",
+    "powerOutput": "Inguvu Zisohoka"
+  },
+  "showroom": {
+    "featuredVehicles": "Imodoka z'Amashanyarazi Zihambaye",
+    "exploreVehicle": "Raba Imodoka",
+    "available": "Irahari",
+    "reserved": "Yabitswe",
+    "allocated": "Yagenwe",
+    "range": "Uburebure bw'Urugendo",
+    "power": "Ubushobozi",
+    "acceleration": "0-100",
+    "topSpeed": "Umuvuduko Ntarengwa",
+    "battery": "Bateri",
+    "startingFrom": "Bitangurira kuri",
+    "reserveNow": "Bika Ubu Nyene",
+    "searchPlaceholder": "Ronderera mu mashirika yacu y'umuyagankuba...",
+    "brand": "Ubwoko gw'Umuduga",
+    "bodyType": "Ubwoko bw'Umubiri",
+    "rangeFilter": "Intera igenda",
+    "inventory": "Imiduga ihari"
+  },
+  "footer": {
+    "tagline": "Turangura mu gushira imbere imiduga mishasha ya kigirishingo ifite inguvu nziza kandi idakora imicafu.",
+    "columns": {
+      "corporate": {
+        "heading": "Ihuriro ry'Imiduga y'Amashirika",
+        "links": [
+          { "label": "Imiduga Yose ya Kigirishingo", "href": "/showroom" },
+          { "label": "Imiduga ya BYD", "href": "/showroom?brand=BYD" },
+          { "label": "Imiduga ya MG", "href": "/showroom?brand=MG" },
+          { "label": "Imiduga ya Toyota", "href": "/showroom?brand=Toyota" },
+          { "label": "Reba Katalogi Yose", "href": "/showroom" }
+        ]
+      },
+      "diplomatic": {
+        "heading": "Inzira y'Abadipulomate",
+        "links": [
+          { "label": "Porogaramu y'Ambasade", "href": "/diplomatic" },
+          { "label": "Imiduga y'ONU", "href": "/diplomatic" },
+          { "label": "Kwinjira kw'Amashirika", "href": "/fleet" },
+          { "label": "Igenamigambi ry'Amategeko", "href": "/diplomatic" },
+          { "label": "Gusaba Imiduga", "href": "/fleet" }
+        ]
+      },
+      "sustainability": {
+        "heading": "Gahunda y'Ibidukikije",
+        "links": [
+          { "label": "Ikarata y'Ibikoresho vyo Guchaji", "href": "/network" },
+          { "label": "Inzira z'Ibidukikije (ESG)", "href": "/network" },
+          { "label": "Amakuru y'Imicafu Zeru", "href": "/network" },
+          { "label": "Ibibanza byo Guchaji na Izuba", "href": "/network" },
+          { "label": "Raporo y'EV mu Burundi", "href": "/network" }
+        ]
+      },
+      "legal": {
+        "heading": "Amategeko & Igenamigambi",
+        "links": [
+          { "label": "Amategeko y'Ingarantiyé", "href": "/fleet" },
+          { "label": "Politiki yo Kurinda Amakuru", "href": "/fleet" },
+          { "label": "Amategeko yo Gukoresha", "href": "/fleet" },
+          { "label": "Politiki ya Cookie", "href": "/fleet" },
+          { "label": "Ikarata y'Urubuga", "href": "/fleet" }
+        ]
+      }
+    },
+    "trust": [
+      {
+        "icon": "shield",
+        "title": "Ubwiza Butagira Kimwe",
+        "desc": "Isuzuma ry'ihinguriro rikomeye kugira ngo ube amahoro."
+      },
+      {
+        "icon": "user",
+        "title": "Mukirwa niwe Mbere",
+        "desc": "Ibyishimo ryawe n'ibanga ryawe ni ivyihutirwa."
+      },
+      {
+        "icon": "globe",
+        "title": "Gutanga ku Isi Yose",
+        "desc": "Tugutwarira imiduga ya kigirishingo aho utuye."
+      },
+      {
+        "icon": "zap",
+        "title": "Ejo Haziza Heza",
+        "desc": "Turangura guteza imbere ejo haziza heza."
+      }
+    ],
+    "badges": [
+      {
+        "icon": "shield",
+        "title": "Ingarantiyé y'Imyaka 8 ya Batterie",
+        "desc": "Twambuka mu mahoro."
+      },
+      {
+        "icon": "charging",
+        "title": "Inzira y'Igihugu yo Guchaji",
+        "desc": "Iga ahantu h'ibihumbi byo guchaji."
+      },
+      {
+        "icon": "refresh",
+        "title": "Ubufasha bw'Inzira 24/7",
+        "desc": "Turi hano igihe ushaka."
+      },
+      {
+        "icon": "lock",
+        "title": "Bikingiriwe & Bigenwe",
+        "desc": "Amakuru yawe azorindwa igihe cose."
+      }
+    ],
+    "newsletter": {
+      "heading": "Amakuru mashasha",
+      "desc": "Iyandikishe kugira ngo ubone amakuru mashasha, amatanga n'ibikorwa bidasanzwe.",
+      "placeholder": "Injiza imeyili yawe",
+      "ariaLabel": "Iyandikishe"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "bottom": {
+      "copyright": "© 2026 Ikibanza Premium 0 Km. Ibipimo vy'Ihinguriro Gusa.",
+      "privacy": "Politiki yo Kurinda Amakuru",
+      "terms": "Amategeko yo Gukoresha",
+      "cookies": "Politiki ya Cookie",
+      "sitemap": "Ikarata y'Urubuga",
+      "backToTop": "Subira hejuru"
+    }
+  },
+  "about": {
+    "title": "Ibitwerekeye Skyline Motors",
+    "subtitle": "Kuduga mu ntera mu kwigendesha i Bujumbura mu Burundi.",
+    "mission": "Intumbero yacu i Bujumbura",
+    "missionDesc": "Kuri Skyline Motors, intumbero yacu ni uguhindura ingene abantu banyongera mu Burundi mukubaha imiduga myiza cane ikoresha umuyagankuba. Twaritayeho gutanga ibikorwa vy'akataraboneka, inyishu zirama hamwe n'uburigene bworoshe bwo kwitunga umuduga, kugira abakiliya bacu barihe make kandi banyonge neza cane. Turateye ishema ryo kuzana kazoza k'ukugendesha imiduga i Bujumbura.",
+    "leadership": "Uburongozi bw'Ishengero",
+    "leadershipDesc": "Abatunganya neza imigambi ifise intumbero inyuma y'urugendo rw'imiduga rukomeye mu Burundi.",
+    "unwaveringCommitment": "Our Unwavering Commitment",
+    "premiumService": "Igikorwa Gikomeye",
+    "premiumServiceDesc": "Gufatwa neza mu nzego zose, kuva mu biganiro gushika ku kwitwararika no gukurikirana mu gihugu cose.",
+    "sustainableSolutions": "Inyishu Zirama",
+    "sustainableSolutionsDesc": "Kuyobora urugendo rwo kwimukira ku mbaraga z'icyatsi mu Burundi utitaye ku bihano canke ku bwiza bw'umuduga.",
+    "seamlessOwnership": "Kwitunga ku buryo Bworoshe",
+    "seamlessOwnershipDesc": "Uburyo bwo kworohereza mu mahera, amasezerano yo kwizerera yo mu rwego rwo hejuru, n'ibidukikije byoroshye ku banyongaji b'akataraboneka."
+  },
+  "services": {
+    "heroTitle": "Guhunda Inguvu mu Mutima w'Afrika",
+    "heroDesc": "Raba ingene réseau yacu yo guchaji yihuta cane iriko iraguka kurenza urugero mu Burundi no muri Repebuli ya Demokarasi ya Kongo.",
+    "findStation": "Rondera Ikibanza",
+    "viewMap": "Raba Ikarata",
+    "explore": "Raba Ibiriko Bikora",
+    "gridTitle": "Réseau y'Inguvu mu Karere",
+    "gridDesc": "Ibibanza biteguye neza bihuza Bujumbura gushika ku mbibi za Kinshasa na Goma. Réseau yacu niyo nkingi y'ingendo z'amashanyarazi muri Afrika.",
+    "operational": "Kwirikije amasezerano",
+    "operationalSub": "Ibibanza 150kW Bikora neza",
+    "expanding": "Igirwa nshasha",
+    "expandingSub": "Gutegura ibibanza biriko birakorwa",
+    "bujumburaHub": "Ikibanza ca Bujumbura",
+    "kinshasaSuperhub": "Ikibanza Gikomeye ca Kinshasa",
+    "gomaStation": "Ikibanza ca Goma",
+    "realTimeStatus": "Uko bihagaze ubu",
+    "connectedPoints": "Ahabikwa 142 Hahujwe",
+    "infraTitle": "Ibikoresho vy'Umuvuduko mwinshi",
+    "techExcellence": "Ubuhanga buhanitse",
+    "dcFastCharging": "Guchaji DC Yihuta ya 150kW",
+    "thirtyMins": "Iminota 30",
+    "thirtyMinsDesc": "Guchaji mu minota mike cyane kuva kuri 20% gushika kuri 80% y'inguvu.",
+    "secTitle": "Uburinzi bw'amasaha 24/7",
+    "secDesc": "Ibibanza birinzwe neza bifise n'ibibanza vyiza vyo kuruhukiramo.",
+    "homeSuiteTitle": "Ibikoresho vyo Guchaji Muhira",
+    "homeSuiteDesc": "Inyishu z'inguvu nziza ku rugo rwawe canke ku biro vy'uburongozi.",
+    "installationOrder": "Saba Igikoresho",
+    "portableUtility": "Igikoresho Gikomeye ku Ngendo",
+    "careTitle": "Umutekano n'Ukwitwararika kwa Skyline",
+    "precisionManuf": "Ubugenzuzi bw'Imiriro Inini",
+    "precisionManufDesc": "Abasuzumyi bacu bafise impapuro z'umutsindo bakoresha ibikoresho vyihariye mu kumenya ingene bateri ihagaze no gutunganya neza igipimo c'ubushuhe ku bera ikirere co mu rurembo rwa Afrika yo hagati.",
+    "coverageTitle": "Inshingano z'Ubwishingizi mu Karere",
+    "coverageDesc": "Igarantiya y'imyaka 8 canke ibirometero 160,000 ku bikoresho vyose vy'umuduga, backed by ubufasha bw'imbere mu gihugu mu Burundi na DRC.",
+    "certifiedTechs": "Abasuzumyi Banyamutsindo",
+    "certifiedTechsDesc": "Ukwigishwa kudasiba gufasha abakozi bacu kuguma imbere mu buhanga bw'imiduga y'amashanyarazi n'amategeko y'umutekano.",
+    "supportTitle": "Ubufasha bwo Guchaji bwihuta",
+    "supportDesc": "Ufise ibibazo ku gushiraho canke uko réseau ihagaze? Hamagara abatunganya ibikorwa bacu mu karere biciye kuri WhatsApp.",
+    "waBtn": "Tunga Ibiganiro n'Abasuzumyi ku bwo Guchaji biciye kuri WhatsApp"
+  },
+  "contact": {
+    "hereToHelp": "Turi hapa kugira tugufashe",
+    "helpDesc": "Injira mu rugendo rwa kazoza k'ukugendesha mu Burundi no muri DRC. Abasuzumyi bacu biteguye kukorohereza kwinjira mu rugendo rwa kazoza k'amashanyarazi.",
+    "nameLabel": "Izina",
+    "namePlaceholder": "akarere: Jean-Pierre Nkurunziza",
+    "emailLabel": "Imeyili yawe",
+    "emailPlaceholder": "akarere: contact@skyline-motors.com",
+    "messageLabel": "Ubutumwa",
+    "messagePlaceholder": "Tubwire ingene twogufasha...",
+    "btnSubmit": "Rungika ubutumwa",
+    "testimonial": "Skyline yaragabanyije iminsi yo gutegura imigambi ku gipimo ca 30% kandi yahinduye urugendo gwacu mu karere k'u Burundi na DRC biciye mu gufasha imiduga y'amashanyarazi (EV).",
+    "bujumburaShowroom": "Ahabikwa Imiduga i Bujumbura",
+    "kinshasaHub": "Ikibanza co Gutwariramu Ibintu ca Kinshasa",
+    "customerCare": "Uko dufasha Abakiliya",
+    "viewOnMap": "Raba ku Karata",
+    "liveSupport": "Ubufasha bwa Direct",
+    "supportSubtitle": "Bihari amasaha yose 24/7 ku bwo gufasha ibikoresho vy'amashanyarazi mu karere.",
+    "subjectLabel": "Umutwe w'Ubutumwa",
+    "subjectProcurement": "Kugura Umuduga",
+    "subjectAppointment": "Kwerekana Urwandiko ry'Ibikorwa",
+    "subjectFleet": "Inyishu z'Imiduga y'Amashirika",
+    "subjectSupport": "Ubufasha bw'Ubuhanga",
+    "subjectPartnerships": "Ubufatanye",
+    "consent": "Ndemeye ko amakuru yanje akoreshwa twisunze amategeko yo kurinda umutekano w'amakuru.",
+    "sending": "Biriko birarungikwa...",
+    "success": "Ubutumwa bwashitse",
+    "submitting": "Rungika Igisabisho c'Amashirika"
+  },
+  "efficiencyCalculator": {
+    "roiAnalytics": "Ibiharuro vy'Inyungu (ROI)",
+    "sustainabilityCalculator": "Ikiharuro c'Ukurama",
+    "selectVehicleSegment": "Hitamo Ubwoko bw'Imiduga",
+    "commercialVan": "Ukwandika no Gutwara Ibintu (Van)",
+    "citySedan": "Imiduga yo mu Gisagara (Sedan)",
+    "regionalSuv": "Imiduga y'Imisozi (SUV)",
+    "personalMoto": "Ikinga ry'Agato (Moto)",
+    "estimatedMonthlyKm": "Ibirometero Bigereranijwe ku Kwezi",
+    "annualSavingsEstimate": "Amafaranga Aziganywa ku Mwaka",
+    "calculatedFooter": "Bigereranijwe n'ibiciro vy'ibitoro vy'ubu i Bujumbura na Kinshasa.",
+    "requestAudit": "Saba Ikiharuro Cuzuye"
+  }
+}

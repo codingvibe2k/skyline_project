@@ -1,0 +1,265 @@
+{
+  "hero": {
+    "badge": "Bujumbura, Burundi",
+    "title": "Premium Automotive Showroom",
+    "subtitle": "Absolute 0 Km Standard",
+    "description": "Discover our exclusive fleet of factory-fresh electric vehicles, designed for diplomats, corporates, and demanding institutions in Burundi with zero emissions.",
+    "ctaPrimary": "Explore Showroom",
+    "ctaSecondary": "Charging Infrastructure"
+  },
+  "nav": {
+    "showroom": "Fleet Showroom",
+    "chargingGrid": "Charging Grid",
+    "inquiries": "Inquiries",
+    "controlCenter": "Control Center",
+    "network": "Charging Network",
+    "fleet": "Corporate Intake",
+    "diplomatic": "Diplomatic Hub",
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "contact": "Contact",
+    "selectLanguage": "Select Language"
+  },
+  "properties": {
+    "batteryPack": "Battery Pack",
+    "operatingRange": "Operating Range",
+    "peakPower": "Peak Power",
+    "onBoardComputer": "On-Board Computer",
+    "factoryWarranty": "Factory Warranty",
+    "energyCapacity": "Energy Capacity",
+    "driveType": "Drive Configuration",
+    "acceleration": "Acceleration (0-100 km/h)"
+  },
+  "infrastructure": {
+    "stationStatus": "Station Status",
+    "chargerConnection": "Charger Connection",
+    "highVoltageOutput": "High-Voltage Power Output",
+    "activeStations": "Active Stations",
+    "connectorType": "Connector Type",
+    "powerOutput": "Power Output"
+  },
+  "showroom": {
+    "featuredVehicles": "Featured Electric Vehicles",
+    "exploreVehicle": "Explore Vehicle",
+    "available": "Available",
+    "reserved": "Reserved",
+    "allocated": "Allocated",
+    "range": "Range",
+    "power": "Power",
+    "acceleration": "0-100",
+    "topSpeed": "Top Speed",
+    "battery": "Battery",
+    "startingFrom": "Starting From",
+    "reserveNow": "Reserve Now",
+    "searchPlaceholder": "Search our electric collection...",
+    "brand": "Brand",
+    "bodyType": "Body Type",
+    "rangeFilter": "Range",
+    "inventory": "Inventory"
+  },
+  "footer": {
+    "tagline": "Pioneering factory-fresh electric mobility with unmatched performance and zero emissions at the core.",
+    "columns": {
+      "corporate": {
+        "heading": "Corporate Fleet Hub",
+        "links": [
+          { "label": "All Electric Vehicles", "href": "/showroom" },
+          { "label": "BYD Models", "href": "/showroom?brand=BYD" },
+          { "label": "MG Models", "href": "/showroom?brand=MG" },
+          { "label": "Toyota Models", "href": "/showroom?brand=Toyota" },
+          { "label": "View Full Catalog", "href": "/showroom" }
+        ]
+      },
+      "diplomatic": {
+        "heading": "Diplomatic Network",
+        "links": [
+          { "label": "Embassy Fleet Program", "href": "/diplomatic" },
+          { "label": "UN Agency Allocation", "href": "/diplomatic" },
+          { "label": "Corporate Intake", "href": "/fleet" },
+          { "label": "Protocol Compliance", "href": "/diplomatic" },
+          { "label": "Fleet Inquiry", "href": "/fleet" }
+        ]
+      },
+      "sustainability": {
+        "heading": "Sustainability Blueprint",
+        "links": [
+          { "label": "Charging Grid Map", "href": "/network" },
+          { "label": "ESG Commitments", "href": "/network" },
+          { "label": "Zero Emission Data", "href": "/network" },
+          { "label": "Solar Charging Hubs", "href": "/network" },
+          { "label": "Burundi EV Report", "href": "/network" }
+        ]
+      },
+      "legal": {
+        "heading": "Legal & Compliance",
+        "links": [
+          { "label": "Factory Warranty Terms", "href": "/fleet" },
+          { "label": "Privacy Policy", "href": "/fleet" },
+          { "label": "Terms of Service", "href": "/fleet" },
+          { "label": "Cookie Policy", "href": "/fleet" },
+          { "label": "Sitemap", "href": "/fleet" }
+        ]
+      }
+    },
+    "trust": [
+      {
+        "icon": "shield",
+        "title": "Unmatched Quality",
+        "desc": "Rigorous factory certification for uncompromised excellence."
+      },
+      {
+        "icon": "user",
+        "title": "Client First",
+        "desc": "Your satisfaction and privacy are our top priorities."
+      },
+      {
+        "icon": "globe",
+        "title": "Worldwide Delivery",
+        "desc": "Delivering electric mobility to your doorstep."
+      },
+      {
+        "icon": "zap",
+        "title": "Sustainable Future",
+        "desc": "Driving innovation for a cleaner tomorrow."
+      }
+    ],
+    "badges": [
+      {
+        "icon": "shield",
+        "title": "8-Year Battery Warranty",
+        "desc": "Drive with complete peace of mind."
+      },
+      {
+        "icon": "charging",
+        "title": "Nationwide Charging Network",
+        "desc": "Access thousands of charging points."
+      },
+      {
+        "icon": "refresh",
+        "title": "24/7 Roadside Assistance",
+        "desc": "We're here whenever you need us."
+      },
+      {
+        "icon": "lock",
+        "title": "Secure & Encrypted",
+        "desc": "Your data is always protected."
+      }
+    ],
+    "newsletter": {
+      "heading": "Newsletter",
+      "desc": "Subscribe to get the latest updates on new arrivals, offers, and exclusive events.",
+      "placeholder": "Enter your email",
+      "ariaLabel": "Subscribe"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "bottom": {
+      "copyright": "© 2026 Premium 0 Km Showroom. Factory Pristine Specifications Only.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "sitemap": "Sitemap",
+      "backToTop": "Back to top"
+    }
+  },
+  "about": {
+    "title": "About Skyline Motors",
+    "subtitle": "Elevating Your Drive in Bujumbura, Burundi.",
+    "mission": "Our Mission in Bujumbura",
+    "missionDesc": "At Skyline Motors, our mission is to revolutionize personal mobility in Burundi by providing access to premium electric vehicles. We are committed to offering exceptional service, sustainable solutions, and a seamless ownership experience, ensuring our customers pay less and drive better. We are proud to bring the future of driving to Bujumbura.",
+    "leadership": "The Leadership Team",
+    "leadershipDesc": "The visionary minds behind Burundi's premium automotive experience.",
+    "unwaveringCommitment": "Our Unwavering Commitment",
+    "premiumService": "Premium Service",
+    "premiumServiceDesc": "White-glove treatment at every touchpoint, from consultation to long-term maintenance.",
+    "sustainableSolutions": "Sustainable Solutions",
+    "sustainableSolutionsDesc": "Driving the transition to green energy in Burundi without compromising on performance or luxury.",
+    "seamlessOwnership": "Seamless Ownership",
+    "seamlessOwnershipDesc": "Flexible financing, comprehensive warranties, and an effortless ecosystem for the discerning driver."
+  },
+  "services": {
+    "heroTitle": "Powering the Heart of Africa",
+    "heroDesc": "Explore our rapidly expanding ultra-fast charging network across Burundi and the Democratic Republic of Congo.",
+    "findStation": "Find a Station",
+    "viewMap": "View Map",
+    "explore": "Explore Services",
+    "gridTitle": "The Regional Power Grid",
+    "gridDesc": "Strategically positioned hubs connecting Bujumbura to the far reaches of Kinshasa and Goma. Our grid is the backbone of African electric mobility.",
+    "operational": "Operational",
+    "operationalSub": "Active 150kW Hubs",
+    "expanding": "Expanding",
+    "expandingSub": "Site Preparation Underway",
+    "bujumburaHub": "Bujumbura Hub",
+    "kinshasaSuperhub": "Kinshasa Superhub",
+    "gomaStation": "Goma Station",
+    "realTimeStatus": "Real-time Status",
+    "connectedPoints": "142 Connected Points",
+    "infraTitle": "Ultra-Fast Infrastructure",
+    "techExcellence": "Technical Excellence",
+    "dcFastCharging": "150kW DC Fast Charging",
+    "thirtyMins": "30 Minutes",
+    "thirtyMinsDesc": "Rapid replenishment from 20% to 80% charge capacity.",
+    "secTitle": "24/7 Security",
+    "secDesc": "Monitored premises with premium lounge amenities.",
+    "homeSuiteTitle": "The Home Charging Suite",
+    "homeSuiteDesc": "Refined energy solutions for your residence or executive office.",
+    "installationOrder": "Order for Installation",
+    "portableUtility": "Ruggedized Mobile Utility",
+    "careTitle": "Skyline Care & Maintenance",
+    "precisionManuf": "High-Voltage Diagnostics",
+    "precisionManufDesc": "Our certified technicians utilize proprietary diagnostic tools to monitor battery health and optimize thermal management systems for the Central African climate.",
+    "coverageTitle": "Regional Warranty Coverage",
+    "coverageDesc": "A comprehensive 8-year or 160,000km warranty on all drivetrain components, backed by local support centers in Burundi and DRC.",
+    "certifiedTechs": "Certified Technicians",
+    "certifiedTechsDesc": "Ongoing specialist training ensure our team remains at the forefront of electric vehicle engineering and safety protocols.",
+    "supportTitle": "Immediate Charging Support",
+    "supportDesc": "Have questions about installation or network status? Connect directly with our regional specialists.",
+    "waBtn": "Consult a Charging Specialist via WhatsApp"
+  },
+  "contact": {
+    "hereToHelp": "We're here to help",
+    "helpDesc": "Experience the future of mobility in Burundi and DRC. Our team of specialists is ready to facilitate your journey into elite electric performance.",
+    "nameLabel": "Name",
+    "namePlaceholder": "e.g. Jean-Pierre Nkurunziza",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "e.g. contact@skyline-motors.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Let us know how we can help...",
+    "btnSubmit": "Send message",
+    "testimonial": "Skyline cut project delays by 30% and transformed our regional logistics across Burundi and DRC with their impeccable EV fleet support.",
+    "bujumburaShowroom": "Bujumbura Showroom",
+    "kinshasaHub": "Kinshasa Logistics Hub",
+    "customerCare": "Customer Care",
+    "viewOnMap": "View on Map",
+    "liveSupport": "Live Support",
+    "supportSubtitle": "Available 24/7 for regional EV infrastructure support.",
+    "subjectLabel": "Subject",
+    "subjectProcurement": "Vehicle Procurement",
+    "subjectAppointment": "Service Appointment",
+    "subjectFleet": "Fleet Solutions",
+    "subjectSupport": "Technical Support",
+    "subjectPartnerships": "Partnerships",
+    "consent": "I agree to the processing of my personal data according to the privacy policy.",
+    "sending": "Sending...",
+    "success": "Message Received",
+    "submitting": "Submit Portfolio Inquiry"
+  },
+  "efficiencyCalculator": {
+    "roiAnalytics": "ROI Analytics",
+    "sustainabilityCalculator": "Sustainability Calculator",
+    "selectVehicleSegment": "Select Vehicle Segment",
+    "commercialVan": "Commercial Logistics (Van)",
+    "citySedan": "City Commuter (Sedan)",
+    "regionalSuv": "Regional Terrain (SUV)",
+    "personalMoto": "Personal Commuter (Moto)",
+    "estimatedMonthlyKm": "Estimated Monthly Kilometers",
+    "annualSavingsEstimate": "Annual Savings Estimate",
+    "calculatedFooter": "Calculated vs. current fuel prices in Kinshasa/Bujumbura.",
+    "requestAudit": "Request Full Audit"
+  }
+}

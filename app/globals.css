@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* Suppress standard light modes by setting base values directly to dark luxury theme */
+  --background: #070807;
+  --foreground: #e2e8f0;
+}
+
+@theme {
+  /* Brand Luxury Palette */
+  --color-brand-obsidian: #070807;
+  --color-brand-espresso: #1f1c18;
+  --color-brand-crimson: #dd423f;
+  --color-brand-gold: #e1c499;
+  --color-brand-platinum: #e2e8f0;
+  --color-brand-emerald: #10b981;
+  --color-status-success: #059669;
+  --color-status-error: #dc2626;
+
+  /* Typography Fonts */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+
+  /* Corporate Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Bounded Typography Scale (Explicitly map line heights to avoid layout shifts) */
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.875rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 2.25rem;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 2.75rem;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 3.5rem;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 4.25rem;
+  --text-7xl: 4.5rem;
+  --text-7xl--line-height: 5rem;
+
+  /* Custom Typography Sizes for Skyline Brand */
+  --text-headline-lg: 3rem;
+  --text-headline-lg--line-height: 1.2;
+  --text-headline-md: 1.8rem;
+  --text-headline-md--line-height: 1.3;
+  --text-display-lg: 4rem;
+  --text-display-lg--line-height: 1.1;
+  --text-headline-lg-mobile: 2rem;
+  --text-headline-lg-mobile--line-height: 1.2;
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.6;
+  --text-body-md: 1rem;
+  --text-body-md--line-height: 1.6;
+  --text-label-lg: 0.875rem;
+  --text-label-lg--line-height: 1.4;
+  --text-label-sm: 0.75rem;
+  --text-label-sm--line-height: 1.4;
+
+  /* Aureate Obsidian Additions */
+  --color-surface-dim: #121414;
+  --color-surface: #121414;
+  --color-surface-bright: #38393a;
+  --color-surface-container-lowest: #0c0f0f;
+  --color-surface-container-low: #1a1c1c;
+  --color-surface-container: #1e2020;
+  --color-surface-container-high: #282a2b;
+  --color-surface-container-highest: #333535;
+  --color-on-surface: #e2e2e2;
+  --color-on-surface-variant: #d0c5af;
+  --color-inverse-surface: #e2e2e2;
+  --color-inverse-on-surface: #2f3131;
+  --color-outline: #99907c;
+  --color-outline-variant: #4d4635;
+  --color-surface-tint: #e9c349;
+  --color-primary: #f2ca50;
+  --color-on-primary: #3c2f00;
+  --color-primary-container: #d4af37;
+  --color-on-primary-container: #554300;
+  --color-background: #121414;
+  --color-on-background: #e2e2e2;
+
+  --color-primary-fixed: #ffe088;
+  --color-primary-fixed-dim: #e9c349;
+  --color-on-primary-fixed: #241a00;
+  --color-on-primary-fixed-variant: #574500;
+  --color-secondary: #c8c6c5;
+  --color-on-secondary: #313030;
+  --color-secondary-container: #474746;
+  --color-on-secondary-container: #b7b5b4;
+  --color-secondary-fixed: #e5e2e1;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-on-secondary-fixed: #1c1b1b;
+  --color-on-secondary-fixed-variant: #474746;
+
+  --color-tertiary: #ffbebc;
+  --color-on-tertiary: #680011;
+  --color-tertiary-container: #ff9594;
+  --color-on-tertiary-container: #8f001b;
+  --color-tertiary-fixed: #ffdad8;
+  --color-tertiary-fixed-dim: #ffb3b1;
+  --color-on-tertiary-fixed: #410007;
+  --color-on-tertiary-fixed-variant: #92001c;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --font-display-lg: "Playfair", serif;
+  --font-headline-lg: "Playfair", serif;
+  --font-headline-lg-mobile: "Playfair", serif;
+  --font-headline-md: "Playfair", serif;
+  --font-special: "Merienda", cursive;
+
+  --font-body-lg: "Playfair", serif;
+  --font-body-md: "Playfair", serif;
+  --font-label-lg: "Playfair", serif;
+  --font-label-sm: "Playfair", serif;
+
+  --spacing-container-max: 1280px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 64px;
+  --spacing-gutter: 24px;
+  --spacing-unit: 8px;
+}
+
+/* Base resets and configuration styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-brand-obsidian);
+  color: var(--color-brand-platinum);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gold-border {
+  border: 1px solid var(--color-primary);
+}
+.gold-glow:hover {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.text-shadow-hero {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+}
+.car-mask {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/* Hide scrollbars globally */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── CUSTOM STYLING REQUEST OVERRIDES ─── */
+
+/* 1. All simple p tags globally styled to share the Merienda font family */
+p {
+  font-family: var(--font-merienda), "Merienda", cursive !important;
+}
+
+/* 2. All p tags that have a non-regular text color (gold, primary, light-gold, status, crimson, outline, etc.) are slightly larger and weightier */
+p[class*="text-primary"],
+p[class*="text-brand-gold"],
+p[class*="text-gold"],
+p[class*="text-[#D4AF37]"],
+p[class*="text-[#e9c349]"],
+p[class*="text-[#f2ca50]"],
+p[class*="text-[#E1C499]"],
+p[class*="text-brand-crimson"],
+p[class*="text-error"],
+p[class*="text-status-"],
+p[class*="text-outline"],
+p[class*="text-on-primary"],
+p[class*="text-on-primary-container"] {
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.025em;
+}
+
+/* 3. Every single CTA element (buttons, submit inputs, links acting as CTAs) across the application share a border-radius of 6px */
+button,
+input[type="submit"],
+input[type="button"],
+a[class*="bg-primary"],
+a[class*="bg-brand-"],
+a[class*="bg-on-primary"],
+a[class*="bg-primary-container"],
+a[class*="bg-[#"],
+a[class*="border-brand-gold"],
+a[class*="border-primary"],
+a.btn,
+.cta-button {
+  border-radius: 6px !important;
+}
+
+/* 4. All card components share a border-radius of 6px */
+.card,
+div[class*="bg-surface-container-"]:not(.bg-surface-container-lowest),
+div[class*="border-"]:not([class*="border-0"]) {
+  border-radius: 6px !important;
+}

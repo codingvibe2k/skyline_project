@@ -20,15 +20,20 @@ interface PageProps {
 export default async function ServicesPage({ params }: PageProps) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  const mapApiKey = process.env.MAPTILER_API_KEY || process.env.NEXT_PUBLIC_MAPTILER_API_KEY || "";
+  const mapApiKey =
+    process.env.MAPTILER_API_KEY ||
+    process.env.NEXT_PUBLIC_MAPTILER_API_KEY ||
+    "";
   const s = dict.services || {
     heroTitle: "Powering the Heart of Africa",
-    heroDesc: "Explore our rapidly expanding ultra-fast charging network across Burundi and the Democratic Republic of Congo.",
+    heroDesc:
+      "Explore our rapidly expanding ultra-fast charging network across Burundi and the Democratic Republic of Congo.",
     findStation: "Find a Station",
     viewMap: "View Map",
     explore: "Explore Services",
     gridTitle: "The Regional Power Grid",
-    gridDesc: "Strategically positioned hubs connecting Bujumbura to the far reaches of Kinshasa and Goma. Our grid is the backbone of African electric mobility.",
+    gridDesc:
+      "Strategically positioned hubs connecting Bujumbura to the far reaches of Kinshasa and Goma. Our grid is the backbone of African electric mobility.",
     operational: "Operational",
     operationalSub: "Active 150kW Hubs",
     expanding: "Expanding",
@@ -46,19 +51,24 @@ export default async function ServicesPage({ params }: PageProps) {
     secTitle: "24/7 Security",
     secDesc: "Monitored premises with premium lounge amenities.",
     homeSuiteTitle: "The Home Charging Suite",
-    homeSuiteDesc: "Refined energy solutions for your residence or executive office.",
+    homeSuiteDesc:
+      "Refined energy solutions for your residence or executive office.",
     installationOrder: "Order for Installation",
     portableUtility: "Ruggedized Mobile Utility",
     careTitle: "Skyline Care & Maintenance",
     precisionManuf: "High-Voltage Diagnostics",
-    precisionManufDesc: "Our certified technicians utilize proprietary diagnostic tools to monitor battery health and optimize thermal management systems for the Central African climate.",
+    precisionManufDesc:
+      "Our certified technicians utilize proprietary diagnostic tools to monitor battery health and optimize thermal management systems for the Central African climate.",
     coverageTitle: "Regional Warranty Coverage",
-    coverageDesc: "A comprehensive 8-year or 160,000km warranty on all drivetrain components, backed by local support centers in Burundi and DRC.",
+    coverageDesc:
+      "A comprehensive 8-year or 160,000km warranty on all drivetrain components, backed by local support centers in Burundi and DRC.",
     certifiedTechs: "Certified Technicians",
-    certifiedTechsDesc: "Ongoing specialist training ensure our team remains at the forefront of electric vehicle engineering and safety protocols.",
+    certifiedTechsDesc:
+      "Ongoing specialist training ensure our team remains at the forefront of electric vehicle engineering and safety protocols.",
     supportTitle: "Immediate Charging Support",
-    supportDesc: "Have questions about installation or network status? Connect directly with our regional specialists.",
-    waBtn: "Consult a Charging Specialist via WhatsApp"
+    supportDesc:
+      "Have questions about installation or network status? Connect directly with our regional specialists.",
+    waBtn: "Consult a Charging Specialist via WhatsApp",
   };
 
   return (
@@ -190,9 +200,7 @@ export default async function ServicesPage({ params }: PageProps) {
                   <h4 className="font-headline-md text-on-background mb-1">
                     {s.thirtyMins}
                   </h4>
-                  <p className="text-on-surface-variant">
-                    {s.thirtyMinsDesc}
-                  </p>
+                  <p className="text-on-surface-variant">{s.thirtyMinsDesc}</p>
                 </div>
               </div>
               <div className="bg-surface-container p-10 border border-outline-variant hover:border-primary transition-colors flex items-center gap-8">
@@ -205,9 +213,7 @@ export default async function ServicesPage({ params }: PageProps) {
                   <h4 className="font-headline-md text-on-background mb-1">
                     {s.secTitle}
                   </h4>
-                  <p className="text-on-surface-variant">
-                    {s.secDesc}
-                  </p>
+                  <p className="text-on-surface-variant">{s.secDesc}</p>
                 </div>
               </div>
             </div>
@@ -351,9 +357,7 @@ export default async function ServicesPage({ params }: PageProps) {
                   <h4 className="font-headline-md text-on-background mb-2">
                     {s.coverageTitle}
                   </h4>
-                  <p className="text-on-surface-variant">
-                    {s.coverageDesc}
-                  </p>
+                  <p className="text-on-surface-variant">{s.coverageDesc}</p>
                 </div>
               </div>
               <div className="flex gap-6">

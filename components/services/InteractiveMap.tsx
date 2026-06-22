@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import * as maptilersdk from "@maptiler/sdk";
-import "@maptiler/sdk/dist/maptiler-sdk.css";
+import "leaflet/dist/leaflet.css";
 
 // ============================================================================
 // CHARGING STATIONS MOCKUP DATA
@@ -25,8 +24,8 @@ export const CHARGING_STATIONS: Station[] = [
   {
     id: "buj",
     name: "Bujumbura Hub",
-    lat: -3.3822,
-    lng: 29.3644,
+    lat: -3.3599557192429463,
+    lng: 29.3445737409039,
     status: "Operational",
     connectedPoints: 50,
   },
@@ -54,94 +53,98 @@ interface InteractiveMapProps {
 }
 
 export default function InteractiveMap({ apiKey, s }: InteractiveMapProps) {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<maptilersdk.Map | null>(null);
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+  const mapInstanceRef = useRef<any>(null);
+  const markersRef = useRef<{ [key: string]: any }>({});
   const [selectedStation, setSelectedStation] = useState<Station | null>(null);
+  const [isLeafletLoaded, setIsLeafletLoaded] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-  const hasValidKey =
+  // Check if MapTiler API Key looks valid
+  const hasValidMapTilerKey =
     Boolean(apiKey) && apiKey !== "YOUR_API_KEY" && apiKey.trim() !== "";
 
   useEffect(() => {
-    if (!hasValidKey) return;
+    let active = true;
 
-    // Set the MapTiler API Key
-    maptilersdk.config.apiKey = apiKey.trim();
+    // Load Leaflet dynamically on client-side to prevent "window is not defined" error in Next SSR
+    import("leaflet").then((L) => {
+      if (!active) return;
+      setIsLeafletLoaded(true);
 
-    if (map.current) return; // Prevent double initialization
-    if (!mapContainer.current) return;
+      if (!mapContainerRef.current) return;
+      if (mapInstanceRef.current) return; // Already initialized
 
-    try {
-      // Initialize MapTiler Map (STREETS visual style is highly modern and responsive)
-      const mapInstance = new maptilersdk.Map({
-        container: mapContainer.current,
-        style: maptilersdk.MapStyle.STREETS.DARK,
-        center: [22.5, -2.8], // Centralized viewing for East/Central Africa (Burundi / DRC)
-        zoom: 4.5,
+      // Fix default marker icon issues in Webpack/Turbopack with Leaflet
+      delete (L.Icon.Default.prototype as any)._getIconUrl;
+      L.Icon.Default.mergeOptions({
+        iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+        iconRetinaUrl:
+          "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+        shadowUrl:
+          "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
       });
 
-      map.current = mapInstance;
+      // Use MapTiler high-res vector style tiles if a key exists, otherwise fallback to friendly OpenStreetMap tiles
+      const tileUrl = hasValidMapTilerKey
+        ? `https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}@2x.png?key=${apiKey.trim()}`
+        : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 
-      // Add zoom and rotation controls to the top-right
-      mapInstance.addControl(new maptilersdk.NavigationControl(), "top-right");
+      const mapOptions = {
+        center: [-2.8, 22.5] as [number, number], // Focused centered view for DRC / Burundi
+        zoom: 5,
+        zoomControl: false, // We'll add custom positioned zoom control
+        scrollWheelZoom: true,
+        attributionControl: true,
+      };
 
-      // Process and attach custom styled markers for each station
+      const mapInstance = L.map(mapContainerRef.current, mapOptions);
+      mapInstanceRef.current = mapInstance;
+
+      // Add custom zoom controller
+      L.control.zoom({ position: "topright" }).addTo(mapInstance);
+
+      // Render the tile layer
+      L.tileLayer(tileUrl, {
+        attribution: hasValidMapTilerKey ? "&copy; 2026" : "&copy; 2026",
+        tileSize: hasValidMapTilerKey ? 512 : 256,
+        zoomOffset: hasValidMapTilerKey ? -1 : 0,
+        maxZoom: 19,
+      }).addTo(mapInstance);
+
+      // Draw custom interactive HTML markers for each station
       CHARGING_STATIONS.forEach((station) => {
         const isOperational = station.status === "Operational";
 
-        // Create a custom modern HTML marker
-        const markerElement = document.createElement("div");
-        markerElement.className =
-          "relative flex items-center justify-center cursor-pointer group";
-        markerElement.style.width = "32px";
-        markerElement.style.height = "32px";
+        // Render custom styled pulsing HTML element with a location Pin/Icon
+        const customIcon = L.divIcon({
+          className: "custom-leaflet-marker-wrapper",
+          html: `
+            <div class="relative flex items-center justify-center" style="width: 36px; height: 36px;">
+              ${isOperational ? '<span class="absolute inline-flex h-full w-full rounded-full bg-[#f2ca50] opacity-30 animate-pulse" style="animation-duration: 1.5s;"></span>' : ""}
+              <div class="relative flex items-center justify-center w-10 h-9 rounded-full transition-all duration-300 hover:scale-125">
+                <span class="material-symbols-outlined" style="font-family: 'Material Symbols Outlined'; font-size: 30px; color: #1e2020; font-weight: 100; user-select: none;">location_on</span>
+              </div>
+            </div>
+          `,
+          iconSize: [36, 36],
+          iconAnchor: [18, 18],
+        });
 
-        // Outer pulsing ring for active operational ports
-        if (isOperational) {
-          const radarRing = document.createElement("span");
-          radarRing.className =
-            "absolute inline-flex h-full w-full rounded-full bg-[#f2ca50] opacity-40 animate-ping";
-          markerElement.appendChild(radarRing);
-        }
-
-        // Inner solid badge container
-        const badgeContainer = document.createElement("div");
-        badgeContainer.className =
-          "relative flex items-center justify-center w-8 h-8 rounded-full shadow-lg border-2 transition-all duration-300 transform group-hover:scale-110";
-        badgeContainer.style.backgroundColor = isOperational
-          ? "#f2ca50"
-          : "#4b5563";
-        badgeContainer.style.borderColor = "#1e2020";
-
-        // Charging Bolt Icon / Dot
-        const iconContainer = document.createElement("span");
-        iconContainer.className =
-          "material-symbols-outlined text-[16px] select-none";
-        iconContainer.style.color = "#1e2020";
-        iconContainer.innerText = "bolt";
-        badgeContainer.appendChild(iconContainer);
-        markerElement.appendChild(badgeContainer);
-
-        // Tooltip description
-        const tooltip = document.createElement("div");
-        tooltip.className =
-          "absolute -top-10 left-1/2 transform -translate-x-1/2 bg-[#1e2020] text-[#f2ca50] text-[11px] font-bold py-1 px-2.5 rounded shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all pointer-events-none border border-[#f2ca50]/20 z-50";
-        tooltip.innerText = station.name;
-        markerElement.appendChild(tooltip);
-
-        // Bind interactive Popup layout
-        const popupContent = `
-          <div style="font-family: inherit; padding: 6px 4px; min-width: 155px; text-align: left;">
-            <h4 style="font-size: 14px; font-weight: 700; margin: 0 0 6px 0; color: #1e2020; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px;">
+        // Setup Info Window / Popup Content incorporating client global styling and fonts
+        const popupHTML = `
+          <div style="font-family: var(--font-sans), system-ui, sans-serif; padding: 4px; min-width: 165px; text-align: left;">
+            <h4 style="font-size: 14px; font-weight: 700; margin: 0 0 6px 0; color: #111827; border-bottom: 2px solid #e5e7eb; padding-bottom: 4px; font-family: var(--font-sans), sans-serif;">
               ${station.name}
             </h4>
-            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
-              <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: ${isOperational ? "#10b981" : "#f59e0b"};"></span>
-              <span style="font-size: 11px; font-weight: 600; color: #4b5563;">Status: ${station.status}</span>
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+              <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: ${isOperational ? "#f2ca50" : "#6b7280"};"></span>
+              <span style="font-size: 11px; font-weight: 600; color: #4b5563; font-family: var(--font-sans), sans-serif;">Status: ${station.status}</span>
             </div>
             ${
               station.connectedPoints
                 ? `
-              <div style="background-color: #f3f4f6; padding: 4px 6px; border-radius: 4px; font-size: 11px; font-weight: 500; color: #1f2937; display: flex; align-items: center; gap: 4px;">
+              <div style="background-color: #f3f4f6; padding: 6px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; color: #1f2937; display: flex; align-items: center; gap: 6px; font-family: var(--font-mono), monospace;">
                 <span>🔌</span> <span>${station.connectedPoints} Connected Points</span>
               </div>
             `
@@ -150,133 +153,176 @@ export default function InteractiveMap({ apiKey, s }: InteractiveMapProps) {
           </div>
         `;
 
-        const maptilerPopup = new maptilersdk.Popup({
-          offset: 12,
+        const markerPopup = L.popup({
+          offset: [0, -4],
           closeButton: true,
-          closeOnClick: true,
-        }).setHTML(popupContent);
+          className: "custom-leaflet-popup",
+        }).setContent(popupHTML);
 
-        // Render marker wrapper
-        new maptilersdk.Marker({ element: markerElement })
-          .setLngLat([station.lng, station.lat])
-          .setPopup(maptilerPopup)
+        const markerInstance = L.marker([station.lat, station.lng], {
+          icon: customIcon,
+        })
+          .bindPopup(markerPopup)
           .addTo(mapInstance);
+
+        // Track marker instance to trigger it programmatically via sidebar click
+        markersRef.current[station.id] = markerInstance;
+
+        // Custom marker click listener: Smoothly fly-to/zoom closer upon clicking location pins on the map
+        markerInstance.on("click", () => {
+          setSelectedStation(station);
+          mapInstance.flyTo([station.lat, station.lng], 17, {
+            animate: true,
+            duration: 5,
+          });
+        });
       });
-    } catch (error) {
-      console.error("Failed to initialize MapTiler map", error);
-    }
+    });
 
     return () => {
-      if (map.current) {
-        map.current.remove();
-        map.current = null;
+      active = false;
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.remove();
+        mapInstanceRef.current = null;
       }
     };
-  }, [apiKey, hasValidKey]);
+  }, [apiKey, hasValidMapTilerKey]);
 
-  if (!hasValidKey) {
-    return (
-      <div className="w-full h-full flex items-center justify-center bg-surface-container border border-outline-variant rounded-lg p-6 font-sans min-h-[400px]">
-        <div className="text-center max-w-sm">
-          <div className="flex justify-center mb-4">
-            <span className="material-symbols-outlined text-[48px] text-primary">
-              map
-            </span>
-          </div>
-          <h2 className="text-xl font-bold text-white mb-2">
-            MapTiler API Key Required
-          </h2>
-          <p className="text-sm text-gray-400 mb-6 leading-relaxed">
-            We have migrated our charging grid map to <strong>MapTiler</strong>.
-            Obtain a completely free key in seconds to load the fully
-            interactive map.
-          </p>
-          <div className="text-left bg-background p-4 rounded-md text-sm text-gray-300 leading-relaxed border border-outline-variant">
-            <p className="mb-2">
-              <strong>Quick Setup:</strong>
-            </p>
-            <ol className="list-decimal pl-5 space-y-1.5 text-gray-400">
-              <li>
-                Open <strong>Settings</strong> (⚙️ top-right of your AI Studio
-                browser)
-              </li>
-              <li>
-                Select <strong>Secrets</strong>
-              </li>
-              <li>
-                Create a secret named: <code>MAPTILER_API_KEY</code>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Quick action navigation shortcuts
-  const flyToStation = (station: Station) => {
-    if (map.current) {
-      map.current.flyTo({
-        center: [station.lng, station.lat],
-        zoom: 15,
-        essential: true,
+  // Handle fly tours upon sidebar selection click
+  const handleFlyToStation = (station: Station) => {
+    if (mapInstanceRef.current) {
+      mapInstanceRef.current.flyTo([station.lat, station.lng], 17, {
+        animate: true,
+        duration: 5,
       });
       setSelectedStation(station);
+
+      // Open the corresponding popup
+      const marker = markersRef.current[station.id];
+      if (marker) {
+        marker.openPopup();
+      }
     }
   };
 
   return (
-    <div className="relative w-full h-full min-h-[450px] rounded-lg overflow-hidden border border-outline-variant shadow-2xl flex flex-col md:flex-row">
-      {/* Sidebar selection overlay */}
-      <div className="md:absolute top-4 left-4 z-10 w-full md:w-64 bg-background/95 backdrop-blur-md rounded-lg border border-outline-variant p-4 shadow-xl pointer-events-auto">
-        <h3 className="font-sans font-bold text-white text-sm mb-3 uppercase tracking-wider border-b border-outline-variant pb-2">
-          {s.findStation || "Charging Station Finder"}
-        </h3>
-        <div className="space-y-2 max-h-[160px] md:max-h-[220px] overflow-y-auto">
-          {CHARGING_STATIONS.map((station) => (
-            <button
-              key={station.id}
-              onClick={() => flyToStation(station)}
-              type="button"
-              className={`w-full text-left p-2.5 rounded-md transition-all flex items-center justify-between border ${
-                selectedStation?.id === station.id
-                  ? "border-primary bg-primary/10 text-primary"
-                  : "border-transparent hover:bg-surface-container text-gray-300 hover:text-white"
-              }`}
-            >
-              <div className="flex flex-col">
-                <span className="text-xs font-bold leading-none mb-1">
-                  {station.name}
+    <div className="relative w-full h-full min-h-[480px] rounded-lg overflow-hidden border border-outline-variant shadow-2xl flex flex-col md:flex-row font-sans">
+      {/* Sidebar Navigation (Collapsible) */}
+      {isSidebarOpen ? (
+        <div className="w-full md:w-64 bg-background/95 backdrop-blur-md border-b md:border-b-0 md:border-r border-outline-variant p-4 z-10 flex flex-col justify-between shrink-0 pointer-events-auto transition-all duration-300">
+          <div>
+            <div className="flex items-center justify-between border-b border-outline-variant pb-2 mb-3">
+              <h3 className="font-sans font-bold text-white text-xs uppercase tracking-wider">
+                {s.findStation || "Charging Station Finder"}
+              </h3>
+              <button
+                type="button"
+                onClick={() => setIsSidebarOpen(false)}
+                className="text-gray-400 hover:text-primary transition-colors cursor-pointer flex items-center justify-center p-1 rounded hover:bg-surface-container"
+                title="Collapse Panel"
+              >
+                <span className="material-symbols-outlined text-[18px]">
+                  menu_open
                 </span>
-                <span className="text-[10px] opacity-75">
-                  Lat: {station.lat.toFixed(4)}, Lng: {station.lng.toFixed(4)}
-                </span>
+              </button>
+            </div>
+
+            <div className="space-y-2 max-h-[160px] md:max-h-[260px] overflow-y-auto pr-1">
+              {CHARGING_STATIONS.map((station) => {
+                const isActive = selectedStation?.id === station.id;
+                return (
+                  <button
+                    key={station.id}
+                    onClick={() => handleFlyToStation(station)}
+                    type="button"
+                    className={`w-full text-left p-2.5 rounded-md transition-all flex items-center justify-between border font-sans ${
+                      isActive
+                        ? "border-primary bg-primary/10 text-primary font-semibold"
+                        : "border-transparent hover:bg-surface-container text-gray-300 hover:text-white"
+                    }`}
+                  >
+                    <div className="flex flex-col">
+                      <span className="text-xs font-bold leading-none mb-1">
+                        {station.name}
+                      </span>
+                      <span className="text-[10px] opacity-75 font-mono">
+                        Lat: {station.lat.toFixed(4)}, Lng:{" "}
+                        {station.lng.toFixed(4)}
+                      </span>
+                    </div>
+                    <span
+                      className={`w-2.5 h-2.5 rounded-full ${
+                        station.status === "Operational"
+                          ? "bg-primary animate-pulse"
+                          : "bg-gray-500"
+                      }`}
+                    />
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* API connection indicator badges */}
+          <div className="mt-4 pt-3 border-t border-outline-variant font-sans">
+            {hasValidMapTilerKey ? (
+              <div className="flex items-center gap-2 text-[11px] text-green-400">
+                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                <span>Skyline engine active</span>
               </div>
-              <span
-                className={`w-2.5 h-2.5 rounded-full ${
-                  station.status === "Operational"
-                    ? "bg-primary"
-                    : "bg-gray-500"
-                }`}
-              />
-            </button>
-          ))}
+            ) : (
+              <div className="flex flex-col gap-1.5 p-2 bg-yellow-500/10 rounded border border-yellow-500/20">
+                <div className="flex items-center gap-2 text-[10px] text-yellow-400 font-semibold mb-0.5">
+                  <span className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></span>
+                  <span>OpenStreetMap fallback active</span>
+                </div>
+                <p className="text-[9px] text-gray-400 leading-normal">
+                  To upgrade to MapTiler HD vectors, add secret named{" "}
+                  <code>MAPTILER_API_KEY</code>.
+                </p>
+              </div>
+            )}
+          </div>
         </div>
+      ) : (
+        /* Reduced Collapsed Map Icon Mode */
+        <button
+          onClick={() => setIsSidebarOpen(true)}
+          type="button"
+          className="absolute top-4 left-4 z-20 w-11 h-11 bg-background/95 border border-outline-variant text-[#f2ca50] rounded-lg shadow-xl cursor-pointer hover:bg-primary hover:text-background flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+          title="Open "
+        >
+          <span className="material-symbols-outlined text-[22px]">map</span>
+        </button>
+      )}
+
+      {/* Map Display Frame */}
+      <div className="flex-grow relative h-[380px] md:h-auto min-h-[350px] bg-surface-container flex items-center justify-center">
+        {!isLeafletLoaded && (
+          <div className="absolute inset-0 z-50 flex items-center justify-center bg-surface-container/95 flex-col gap-3 font-sans">
+            <span className="material-symbols-outlined text-[36px] text-primary animate-spin">
+              progress_activity
+            </span>
+            <span className="text-sm text-gray-400">Booting Map Canvas...</span>
+          </div>
+        )}
+        <div
+          ref={mapContainerRef}
+          className="absolute inset-0 w-full h-full"
+          style={{ zIndex: 1 }}
+        />
       </div>
 
-      {/* Main Map Container */}
-      <div className="flex-grow w-full h-full relative" ref={mapContainer} />
-
-      {/* Bottom informational bar */}
-      <div className="absolute bottom-6 right-6 p-4 bg-background/95 backdrop-blur-md border border-outline-variant pointer-events-none z-10 rounded-lg shadow-xl">
-        <p className="font-label-sm text-gray-400 mb-1.5 uppercase tracking-tighter">
+      {/* Real-time details HUD */}
+      <div className="absolute bottom-6 right-6 p-4 bg-background/95 backdrop-blur-md border border-outline-variant pointer-events-none z-10 rounded-lg shadow-2xl font-sans">
+        <p className="font-label-sm text-gray-400 mb-1.5 uppercase tracking-tighter text-[10px]">
           {s.realTimeStatus || "Real-time Status"}
         </p>
         <div className="flex items-center gap-2">
           <span className="material-symbols-outlined text-primary text-sm animate-pulse">
             bolt
           </span>
-          <span className="text-body-md text-primary font-bold">
+          <span className="text-body-md text-primary font-bold font-mono">
             {s.connectedPoints || "142 Connected Points"}
           </span>
         </div>
